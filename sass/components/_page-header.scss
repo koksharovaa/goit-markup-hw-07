@@ -5,32 +5,32 @@ nav {
 .site-nav {
     display: flex;
     margin-left: 93px;
+}
 
-    & .item + .item {
-        margin-left: 50px;
-    }
+.site-nav .item+.item {
+    margin-left: 50px;
+}
 
-    & a {
-        position: relative;
-            display: block;
-            padding-bottom: 32px;
-            padding-top: 32px;
-        
-            color: $secondary-text-color;
-        
-            font-weight: 500;
-            font-size: 14px;
-            line-height: 1.14;
-            letter-spacing: 0.02em;
-        
-            transition-property: color;
-            transition-duration: 250ms;
-            transition-timing-function: $timing-function;
-    }
+.site-nav a {
+    position: relative;
+    display: block;
+    padding-bottom: 32px;
+    padding-top: 32px;
 
-    & a:hover, & a:focus {
-        color: $accent-color;
-    }
+    color: $secondary-text-color;
+
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+
+    transition-property: color;
+    transition-duration: 250ms;
+    transition-timing-function: $timing-function;
+
+    &:hover, &:focus {
+            color: $accent-color;
+        }
 }
 
 .link.current {
@@ -42,7 +42,7 @@ nav {
         color: $accent-color;
 
         &::after{
-            content: '';
+                content: '';
                 position: absolute;
                 left: 0;
                 bottom: 0;
@@ -62,24 +62,24 @@ nav {
     align-items: center;
 
     margin-left: auto;
+}
 
-    & .item+.item {
-            margin-left: 50px;
-        }
+.auth-nav .item+.item {
+    margin-left: 50px;
+}
 
-    & a {
-        display: flex;
-        align-items: center;
-        padding-top: 32px;
-        padding-bottom: 32px;
-    
-        color: $primary-text-color;
-    
-        font-weight: 500;
-        font-size: 14px;
-        line-height: 1.14;
-        letter-spacing: 0.02em;
-    }
+.auth-nav a {
+    display: flex;
+    align-items: center;
+    padding-top: 32px;
+    padding-bottom: 32px;
+
+    color: $primary-text-color;
+
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
 }
 
 .contact {
@@ -113,4 +113,3 @@ nav {
 .portfolio.header {
     border-bottom: 1px solid #ececec;
 }
-

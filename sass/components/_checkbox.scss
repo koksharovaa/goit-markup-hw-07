@@ -5,12 +5,20 @@
 
     position: absolute;
 
-    &-label {
-            display: flex;
-            align-items: center;
-    
-            justify-content: center;
+    &:checked ~ .checkbox-icon {
+            background-color: $accent-color;
+            border-color: $accent-color;
+            background-origin: border-box;
+            background-image: url('../images/checkbox.svg');
+            background-size: contain;
         }
+}
+
+.checkbox-label {
+    display: flex;
+    align-items: center;
+
+    justify-content: center;
 }
 
 .checkbox-icon {
@@ -37,12 +45,3 @@
         outline: $accent-color;
     }
 }
-
-.checkbox:checked ~ .checkbox-icon {
-    background-color: $accent-color;
-    border-color: $accent-color;
-    background-origin: border-box;
-    background-image: url('../images/checkbox.svg');
-    background-size: contain;
-}
-

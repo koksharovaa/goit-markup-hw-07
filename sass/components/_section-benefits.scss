@@ -1,14 +1,14 @@
 .benefits {
     padding-bottom: 0;
     padding-top: 94px;
+}
 
-    &.list {
-            display: flex;
-            justify-content: space-between;
-    
-            padding-top: 0;
-            padding-bottom: 0;
-        }
+.benefits.list {
+    display: flex;
+    justify-content: space-between;
+
+    padding-top: 0;
+    padding-bottom: 0;
 }
 
 .benefits .item {

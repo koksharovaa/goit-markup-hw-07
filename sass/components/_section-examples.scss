@@ -1,22 +1,22 @@
 .examples {
     padding-bottom: 94px;
         padding-top: 94px;
+}
 
-    &-nav {
-            display: flex;
-            justify-content: center;
-    
-            list-style: none;
-            margin-bottom: 50px;
-        }
+.examples-nav {
+    display: flex;
+    justify-content: center;
 
-    &-nav .item {
-        margin-right: 8px;
-    }
+    list-style: none;
+    margin-bottom: 50px;
+}
 
-    &-nav .item:nth-child(5) {
-        margin-right: 0;
-    }
+.examples-nav .item {
+    margin-right: 8px;
+}
+
+.examples-nav .item:nth-child(5) {
+    margin-right: 0;
 }
 
 .button-examples {

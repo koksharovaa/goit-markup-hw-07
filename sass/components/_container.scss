@@ -3,13 +3,13 @@
     padding-right: 15px;
     margin: auto;
     width: 1200px;
+}
 
-    &.footer {
-        display: flex;
-        
-            padding-top: 60px;
-            padding-bottom: 60px;
-    }
+.container.footer {
+    display: flex;
+
+    padding-top: 60px;
+    padding-bottom: 60px;
 }
 
 .button {

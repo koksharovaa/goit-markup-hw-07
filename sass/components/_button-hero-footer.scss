@@ -12,15 +12,13 @@
     transition-property: background-color;
     transition-duration: 250ms;
     transition-timing-function: $timing-function;
-}
 
-.button.hero:focus,
-.button.footer:focus {
-    color: $white-color;
-    background-color: $accent-color;
-}
+    &:focus, &:focus {
+            color: $white-color;
+            background-color: $accent-color;
+        }
 
-.button.hero:hover,
-.button.footer:hover {
-    background-color: #1976d2;
+    &:hover, &:hover {
+        background-color: #1976d2;
+    }
 }
