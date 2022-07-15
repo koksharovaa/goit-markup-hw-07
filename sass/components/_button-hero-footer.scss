@@ -1,0 +1,26 @@
+.button.hero,
+.button.footer {
+    color: $white-color;
+    background-color: $accent-color;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border: 0px;
+
+    font-weight: bold;
+    line-height: 1.8;
+    letter-spacing: 0.06em;
+
+    transition-property: background-color;
+    transition-duration: 250ms;
+    transition-timing-function: $timing-function;
+}
+
+.button.hero:focus,
+.button.footer:focus {
+    color: $white-color;
+    background-color: $accent-color;
+}
+
+.button.hero:hover,
+.button.footer:hover {
+    background-color: #1976d2;
+}

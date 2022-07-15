@@ -1,0 +1,116 @@
+nav {
+    display: flex;
+}
+
+.site-nav {
+    display: flex;
+    margin-left: 93px;
+
+    & .item + .item {
+        margin-left: 50px;
+    }
+
+    & a {
+        position: relative;
+            display: block;
+            padding-bottom: 32px;
+            padding-top: 32px;
+        
+            color: $secondary-text-color;
+        
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 1.14;
+            letter-spacing: 0.02em;
+        
+            transition-property: color;
+            transition-duration: 250ms;
+            transition-timing-function: $timing-function;
+    }
+
+    & a:hover, & a:focus {
+        color: $accent-color;
+    }
+}
+
+.link.current {
+    position: relative;
+        display: block;
+
+        padding-right: 0;
+        padding-left: 0;
+        color: $accent-color;
+
+        &::after{
+            content: '';
+                position: absolute;
+                left: 0;
+                bottom: 0;
+            
+                display: block;
+                width: 100%;
+                height: 4px;
+                background-color: $accent-color;
+                border-radius: 2px;
+            
+                transition: opasity 250ms $timing-function;
+        }
+}
+
+.auth-nav {
+    display: flex;
+    align-items: center;
+
+    margin-left: auto;
+
+    & .item+.item {
+            margin-left: 50px;
+        }
+
+    & a {
+        display: flex;
+        align-items: center;
+        padding-top: 32px;
+        padding-bottom: 32px;
+    
+        color: $primary-text-color;
+    
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 1.14;
+        letter-spacing: 0.02em;
+    }
+}
+
+.contact {
+    display: flex;
+    padding-top: 32px;
+    padding-bottom: 32px;
+    color: $primary-text-color;
+
+    transition-property: color;
+    transition-duration: 250ms;
+    transition-timing-function: $timing-function;
+
+    &:hover, &:focus {
+        color: $accent-color;
+    }
+
+    &:hover .mail, &:focus .mail {
+        fill: $accent-color;
+    }
+}
+
+.mail {
+    margin-right: 10px;
+    fill: $primary-text-color;
+
+    transition-property: fill;
+    transition-duration: 250ms;
+    transition-timing-function: $timing-function;
+}
+
+.portfolio.header {
+    border-bottom: 1px solid #ececec;
+}
+

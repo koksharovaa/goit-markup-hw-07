@@ -1,0 +1,22 @@
+.container {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin: auto;
+    width: 1200px;
+
+    &.footer {
+        display: flex;
+        
+            padding-top: 60px;
+            padding-bottom: 60px;
+    }
+}
+
+.button {
+    border-radius: 4px;
+    padding: 10px 32px;
+
+    color: $primary-text-color;
+    background-color: $bg-color;
+    cursor: pointer;
+}
