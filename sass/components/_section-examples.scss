@@ -1,25 +1,25 @@
-.examples {
+.page-examples {
     padding-bottom: 94px;
         padding-top: 94px;
 }
 
-.examples-nav {
-    display: flex;
+.examples__navigation {
+    @include flex;
     justify-content: center;
 
     list-style: none;
     margin-bottom: 50px;
 }
 
-.examples-nav .item {
+.examples__item {
     margin-right: 8px;
+
+    &:nth-child(5) {
+            margin-right: 0;
+        }
 }
 
-.examples-nav .item:nth-child(5) {
-    margin-right: 0;
-}
-
-.button-examples {
+.examples__button {
     color: $secondary-text-color;
     background-color: $secondary-bg-color;
 

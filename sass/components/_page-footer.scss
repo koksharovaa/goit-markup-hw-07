@@ -1,9 +1,9 @@
-.footer {
+.page-footer {
     flex-direction: column;
     background-color: $third-bg-color;
 }
 
-.footer-logo {
+.footer__logo {
     padding: 0;
 
     color: $accent-color;
@@ -15,41 +15,36 @@
     line-height: 31px;
 }
 
-.footer-titles {
-    display: flex;
+.footer__title {
+    @include flex;
     align-items: baseline;
 }
 
-.title-first-child,
-.footer-navigation {
+.title__logo,
+.footer__navigation {
     width: 25%;
 }
 
-.title-second-child,
-.join-block {
+.title__join,
+.join__block {
     width: 25%;
 }
 
-.title-third-child,
-.form-container {
+.title__subscribe,
+.form__container {
     width: 50%;
 }
 
-.footer-info {
-    display: flex;
+.footer__info {
+    @include flex;
 }
 
-.nav-block {
-    display: flex;
-    align-items: baseline;
-}
-
-.footer-list {
+.footer__list {
     margin-top: 20px;
     list-style: none;
 }
 
-.address {
+.footer__address {
     font-size: 14px;
     line-height: 24px;
     color: $white-color;
@@ -58,12 +53,13 @@
     transition-duration: 250ms;
     transition-timing-function: $timing-function;
 
-    &:hover, &:focus {
-            color: $accent-color;
-        }
+    &:hover,
+    &:focus {
+        color: $accent-color;
+    }
 }
 
-.address-title {
+.address__title {
     margin-top: 9px;
     font-size: 14px;
     line-height: 24px;
@@ -73,12 +69,13 @@
     transition-duration: 250ms;
     transition-timing-function: $timing-function;
 
-    &:focus, &:hover {
-            color: $accent-color;
-        }
+    &:focus,
+    &:hover {
+        color: $accent-color;
+    }
 }
 
-.join-block {
+.join__block {
     display: block;
 }
 
@@ -91,21 +88,22 @@
     color: $white-color;
 }
 
-.add.list {
-    display: flex;
+.join__add {
+    @extend %list;
+    @include flex;
     justify-content: flex-start;
     margin-top: 20px;
 }
 
-.add .item {
+.join__item {
     margin-right: 10px;
+
+    &:nth-child(4n) {
+            margin-right: 0;
+        }
 }
 
-.add .item:nth-child(4n) {
-    margin-right: 0;
-}
-
-.add .item .links {
+.join__link {
     display: flex;
     width: 44px;
     height: 44px;
@@ -119,21 +117,22 @@
     transition-duration: 250ms;
     transition-timing-function: $timing-function;
 
-    &:focus, &:hover {
-            color: $accent-color;
-            background-color: $accent-color;
-        }
+    &:focus,
+    &:hover {
+        color: $accent-color;
+        background-color: $accent-color;
+    }
 }
 
-.add-social {
+.join__social {
     fill: $white-color;
 }
 
-.footer-form {
+.form__footer {
     margin-top: 20px;
 }
 
-.email-footer {
+.footer__email {
     box-sizing: border-box;
     width: 358px;
     height: 50px;
@@ -153,13 +152,13 @@
     transition-timing-function: $timing-function;
 
     &::placeholder {
-            font-style: normal;
-            font-weight: 400;
-            font-size: 16px;
-            line-height: 20px;
-            display: flex;
-            align-items: center;
-        }
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 20px;
+        display: flex;
+        align-items: center;
+    }
 
     &:hover {
         border: 2px solid $accent-color;
@@ -170,7 +169,7 @@
     }
 }
 
-.button.footer {
+.footer__button {
     display: inline-flex;
     margin: 0;
     padding-top: 10px;

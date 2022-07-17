@@ -1,10 +1,11 @@
-.customers {
+.page-customers {
         padding-bottom: 94px;
         padding-top: 94px;
     }
 
-.customers.list {
-    display: flex;
+.customers {
+    @extend %list;
+    @include flex;
     justify-content: space-between;
 
     width: 1170px;
@@ -12,23 +13,24 @@
     padding-bottom: 0;
 }
 
-.customers .item {
+.customers__item {
     width: calc((100% - 150px) / 6);
 }
 
-.customers-image {
+.customers__image {
     height: 60px;
     padding: 0;
 
     fill: #afb1b8;
 
     transition-property: color;
+    transition-property: fill;
     transition-duration: 250ms;
     transition-timing-function: $timing-function;
 }
 
-.link-item {
-    display: flex;
+.customers__link {
+    @include flex;
     justify-content: center;
     align-items: center;
     width: 170px;
@@ -48,9 +50,8 @@
     &:hover, &:focus {
             border: 1px solid $accent-color;
         }
-}
 
-.link-item:hover .customers-image,
-.link-item:focus .customers-image {
-    fill: $accent-color;
+    &:hover .customers__image, &:focus .customers__image {
+        fill: $accent-color;
+    }
 }

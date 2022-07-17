@@ -1,28 +1,29 @@
-.business {
+.page-business {
         padding-bottom: 94px;
         padding-top: 94px;
     }
 
-.business.list {
-    display: flex;
+.business{
+    @extend %list;
+    @include flex;
     justify-content: space-between;
 
     padding-top: 0;
     padding-bottom: 0;
 }
 
-.business .item {
+.business__item {
     width: calc((100% - 60px) / 3);
 }
 
-.business-image {
+.business__image {
     position: relative;
-    display: flex;
+    @include flex;
 
     overflow: hidden;
 }
 
-.business-image > .label {
+.business__image > .business__label {
     position: absolute;
     width: 100%;
     height: 70px;
@@ -42,7 +43,7 @@
     color: $white-color;
 }
 
-.item-image {
+.item__image {
     display: block;
 
     width: 100%;

@@ -2,16 +2,17 @@ nav {
     display: flex;
 }
 
-.site-nav {
-    display: flex;
+.navigation {
+    @extend %list;
+    @include flex;
     margin-left: 93px;
 }
 
-.site-nav .item+.item {
+.navigation__item:nth-child(n+2) {
     margin-left: 50px;
 }
 
-.site-nav a {
+.navigation a {
     position: relative;
     display: block;
     padding-bottom: 32px;
@@ -28,75 +29,70 @@ nav {
     transition-duration: 250ms;
     transition-timing-function: $timing-function;
 
-    &:hover, &:focus {
-            color: $accent-color;
-        }
-}
-
-.link.current {
-    position: relative;
-        display: block;
-
-        padding-right: 0;
-        padding-left: 0;
+    &:hover,
+    &:focus {
         color: $accent-color;
-
-        &::after{
-                content: '';
-                position: absolute;
-                left: 0;
-                bottom: 0;
-            
-                display: block;
-                width: 100%;
-                height: 4px;
-                background-color: $accent-color;
-                border-radius: 2px;
-            
-                transition: opasity 250ms $timing-function;
-        }
+    }
 }
 
-.auth-nav {
-    display: flex;
+.navigation__link {
+    position: relative;
+    display: block;
+
+    padding-right: 0;
+    padding-left: 0;
+    color: $accent-color;
+
+    &::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: 0;
+
+        display: block;
+        width: 100%;
+        height: 4px;
+        background-color: $accent-color;
+        border-radius: 2px;
+
+        transition: opasity 250ms $timing-function;
+    }
+}
+
+.contact {
+    @extend %list;
+    @include flex;
     align-items: center;
 
     margin-left: auto;
 }
 
-.auth-nav .item+.item {
+.contact__item:nth-child(n+2) {
     margin-left: 50px;
 }
 
-.auth-nav a {
-    display: flex;
-    align-items: center;
+.contact__link {
+    @include flex;
     padding-top: 32px;
     padding-bottom: 32px;
-
-    color: $primary-text-color;
-
+    align-items: center;
     font-weight: 500;
     font-size: 14px;
     line-height: 1.14;
     letter-spacing: 0.02em;
-}
-
-.contact {
-    display: flex;
-    padding-top: 32px;
-    padding-bottom: 32px;
     color: $primary-text-color;
 
     transition-property: color;
     transition-duration: 250ms;
     transition-timing-function: $timing-function;
 
-    &:hover, &:focus {
+    &:hover,
+    &:focus {
         color: $accent-color;
     }
 
-    &:hover .mail, &:focus .mail {
+    &:hover .mail,
+    &:focus .mail {
         fill: $accent-color;
     }
 }

@@ -5,8 +5,10 @@
     width: 1200px;
 }
 
-.container.footer {
-    display: flex;
+.footer__container {
+    @extend .container;
+    @include flex;
+    flex-direction: column;
 
     padding-top: 60px;
     padding-bottom: 60px;

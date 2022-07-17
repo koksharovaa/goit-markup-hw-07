@@ -1,5 +1,6 @@
-.button.hero,
-.button.footer {
+.hero__button,
+.footer__button {
+    @extend .button;
     color: $white-color;
     background-color: $accent-color;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
@@ -13,12 +14,14 @@
     transition-duration: 250ms;
     transition-timing-function: $timing-function;
 
-    &:focus, &:focus {
-            color: $white-color;
-            background-color: $accent-color;
-        }
+    &:focus,
+    &:focus {
+        color: $white-color;
+        background-color: $accent-color;
+    }
 
-    &:hover, &:hover {
+    &:hover,
+    &:hover {
         background-color: #1976d2;
     }
 }

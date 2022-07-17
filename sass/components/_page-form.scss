@@ -1,4 +1,4 @@
-.form {
+.page-form {
     width: 528px;
     margin-left: auto;
     margin-right: auto;
@@ -6,54 +6,41 @@
     padding-bottom: 40px;
     padding-left: 40px;
     padding-right: 40px;
-
-    &-title {
-        margin-bottom: 12px;
-        font-style: normal;
-        font-weight: 700;
-        font-size: 20px;
-        line-height: 23px;
-        text-align: left;
-
-        color: $secondary-text-color;
-    }
-
-    &-field {
-        position: relative;
-        display: flex;
-        flex-direction: column;
-        margin-bottom: 10px;
-    }
-
-    &-label {
-        margin-bottom: 4px;
-    
-        font-size: 12px;
-        font-weight: 400;
-        line-height: 14px;
-        letter-spacing: 0.01em;
-        text-align: left;
-    }
-
-    &-icon {
-        position: absolute;
-        display: inline;
-        top: 50%;
-        left: 0;
-        transform: translate(100%, 20%);
-        fill: $secondary-text-color;
-    
-        transition-property: fill;
-        transition-duration: 250ms;
-        transition-timing-function: $timing-function;
-    }
 }
 
-.form-field:focus-within>.form-icon {
+.form__title {
+     margin-bottom: 12px;
+     font-style: normal;
+     font-weight: 700;
+     font-size: 20px;
+     line-height: 23px;
+     text-align: left;
+
+     color: $secondary-text-color;
+ }
+
+.form__field {
+    position: relative;
+    @include flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+
+.form__field:focus-within>.form__icon {
     fill: $accent-color;
 }
 
-.form-input {
+.form__label {
+    margin-bottom: 4px;
+
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 14px;
+    letter-spacing: 0.01em;
+    text-align: left;
+}
+
+.form__input {
     padding-top: 12px;
     padding-left: 42px;
     padding-bottom: 12px;
@@ -84,7 +71,20 @@
     }
 }
 
-.comment {
+.form__icon {
+    position: absolute;
+    display: inline;
+    top: 50%;
+    left: 0;
+    transform: translate(100%, 20%);
+    fill: $secondary-text-color;
+
+    transition-property: fill;
+    transition-duration: 250ms;
+    transition-timing-function: $timing-function;
+}
+
+.form__comment {
     min-height: 120px;
     padding-top: 12px;
     padding-left: 16px;
@@ -118,57 +118,5 @@
         line-height: 14px;
         letter-spacing: 0.01em;
         color: rgba(117, 117, 117, 0.5);
-    }
-}
-
-.form-agreement {
-    margin-top: 20px;
-    margin-bottom: 30px;
-
-    font-style: normal;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 24px;
-
-    & label {
-            color: $secondary-text-color;
-        }
-
-    & a {
-        color: $accent-color;
-        text-decoration: underline;
-    
-        transition-property: transform;
-        transition-duration: 250ms;
-        transition-timing-function: $timing-function;
-
-        &:hover, &:focus {
-            transform: scale(1.05);
-        }
-    }
-}
-
-.modal-button {
-    position: absolute;
-    box-sizing: border-box;
-    width: 30px;
-    height: 30px;
-    left: 490px;
-    top: 8px;
-    right: 8px;
-
-    background-color: $white-color;
-    fill: black;
-    background-repeat: no-repeat;
-    border: 1px solid rgba(0, 0, 0, 0.1);
-    border-radius: 50%;
-    cursor: pointer;
-
-    transition-property: fill;
-    transition-duration: 250ms;
-    transition-timing-function: $timing-function;
-
-    &:hover, &:focus {
-        fill: $accent-color;
     }
 }

@@ -28,3 +28,29 @@
         0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 4px;
 }
+
+.modal__button {
+    position: absolute;
+    box-sizing: border-box;
+    width: 30px;
+    height: 30px;
+    left: 490px;
+    top: 8px;
+    right: 8px;
+
+    background-color: $white-color;
+    fill: black;
+    background-repeat: no-repeat;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+    cursor: pointer;
+
+    transition-property: fill;
+    transition-duration: 250ms;
+    transition-timing-function: $timing-function;
+
+    &:hover,
+    &:focus {
+        fill: $accent-color;
+    }
+}
