@@ -5,8 +5,7 @@
 
 .benefits {
     @extend %list;
-    @include flex;
-    justify-content: space-between;
+    @include flex($align:none, $justify: space-between);
 
     padding-top: 0;
     padding-bottom: 0;

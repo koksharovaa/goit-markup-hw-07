@@ -4,8 +4,7 @@
 }
 
 .examples__navigation {
-    @include flex;
-    justify-content: center;
+    @include flex($align:none);
 
     list-style: none;
     margin-bottom: 50px;
@@ -35,10 +34,9 @@
     padding-bottom: 6px;
     padding-left: 22px;
     padding-right: 22px;
+    cursor: pointer;
 
-    transition-property: background-color;
-    transition-duration: 250ms;
-    transition-timing-function: $timing-function;
+    @include animation(background-color);
 
     &:hover, &:focus {
                 color: $white-color;

@@ -6,8 +6,7 @@
 
 .team {
     @extend %list;
-    @include flex;
-    justify-content: space-between;
+    @include flex($align:none, $justify: space-between);
 
     padding-top: 0;
     padding-bottom: 0;
@@ -23,7 +22,7 @@
 }
 
 .team__image {
-    @include flex;
+    display: flex;
 }
 
 .team__text {
@@ -47,8 +46,7 @@
 
 .team__info {
     @extend %list;
-    @include flex;
-    justify-content: center;
+    @include flex($align:none);
     padding-left: 32px;
     padding-right: 32px;
     padding-bottom: 24px;
@@ -58,13 +56,9 @@
     @include flex;
     width: 44px;
     height: 44px;
-    align-items: center;
-    justify-content: center;
     border-radius: 50%;
 
-    transition-property: background-color;
-    transition-duration: 250ms;
-    transition-timing-function: $timing-function;
+    @include animation(background-color);
 
     &:hover, &:focus {
             background-color: $accent-color;

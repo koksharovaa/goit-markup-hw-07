@@ -41,13 +41,10 @@
     background-color: $white-color;
     fill: black;
     background-repeat: no-repeat;
-    border: 1px solid rgba(0, 0, 0, 0.1);
-    border-radius: 50%;
+    @include bordered($size:1px, $color:rgba(0, 0, 0, 0.1), $radius: 50%);
     cursor: pointer;
 
-    transition-property: fill;
-    transition-duration: 250ms;
-    transition-timing-function: $timing-function;
+    @include animation(fill);
 
     &:hover,
     &:focus {

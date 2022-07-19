@@ -10,9 +10,7 @@
     line-height: 1.8;
     letter-spacing: 0.06em;
 
-    transition-property: background-color;
-    transition-duration: 250ms;
-    transition-timing-function: $timing-function;
+    @include animation(background-color);
 
     &:focus,
     &:focus {

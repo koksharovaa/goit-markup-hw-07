@@ -1,6 +1,6 @@
 .cards {
     @extend %list;
-    @include flex;
+    display: flex;
     flex-wrap: wrap;
 
     padding-top: 0;

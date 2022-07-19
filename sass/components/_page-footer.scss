@@ -16,8 +16,7 @@
 }
 
 .footer__title {
-    @include flex;
-    align-items: baseline;
+    @include flex($align: baseline, $justify: none);
 }
 
 .title__logo,
@@ -36,7 +35,7 @@
 }
 
 .footer__info {
-    @include flex;
+    @include flex($justify:none, $align: none);
 }
 
 .footer__list {
@@ -49,9 +48,7 @@
     line-height: 24px;
     color: $white-color;
 
-    transition-property: color;
-    transition-duration: 250ms;
-    transition-timing-function: $timing-function;
+    @include animation(color);
 
     &:hover,
     &:focus {
@@ -65,9 +62,7 @@
     line-height: 24px;
     color: rgba(255, 255, 255, 0.6);
 
-    transition-property: color;
-    transition-duration: 250ms;
-    transition-timing-function: $timing-function;
+    @include animation(color);
 
     &:focus,
     &:hover {
@@ -90,8 +85,7 @@
 
 .join__add {
     @extend %list;
-    @include flex;
-    justify-content: flex-start;
+    @include flex($justify: flex-start, $align:none);
     margin-top: 20px;
 }
 
@@ -104,18 +98,14 @@
 }
 
 .join__link {
-    display: flex;
+    @include flex;
     width: 44px;
     height: 44px;
-    align-items: center;
-    justify-content: center;
 
     background-color: rgba(255, 255, 255, 0.1);
     border-radius: 50%;
 
-    transition-property: background-color;
-    transition-duration: 250ms;
-    transition-timing-function: $timing-function;
+    @include animation(background-color);
 
     &:focus,
     &:hover {
@@ -146,18 +136,14 @@
     border: 1px solid rgba(255, 255, 255, 0.3);
     border-radius: 4px;
 
-    transition-property: border;
-    transition-property: outline;
-    transition-duration: 250ms;
-    transition-timing-function: $timing-function;
+    @include animation(border outline);
 
     &::placeholder {
+        @include flex($justify:none);
         font-style: normal;
         font-weight: 400;
         font-size: 16px;
         line-height: 20px;
-        display: flex;
-        align-items: center;
     }
 
     &:hover {
@@ -170,7 +156,7 @@
 }
 
 .footer__button {
-    display: inline-flex;
+    @include flex($display: inline-flex, $justify:none);
     margin: 0;
     padding-top: 10px;
     padding-left: 29px;
@@ -178,7 +164,6 @@
     width: 200px;
     height: 50px;
     flex-direction: row;
-    align-items: center;
 
     &::after {
         content: '';
