@@ -156,7 +156,7 @@
 }
 
 .footer__button {
-    @include flex($display: inline-flex, $justify:none);
+    @include flex($display: inline-flex);
     margin: 0;
     padding-top: 10px;
     padding-left: 29px;
